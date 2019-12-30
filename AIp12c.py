@@ -123,11 +123,20 @@ def handle_message(event):
         reply_text = "^__^"
         line_bot_api.reply_message(event.reply_token, TextSendMessage(reply_text))
     elif h == -1:
-        reply_text = "T__T"
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(reply_text))
-    h = 0
-    if (text.find("壞") != -1):
-        line_bot_api.reply_message(event.reply_token, StickerSendMessage(package_id=11537, sticker_id=52002746))
+        line_bot_api.push_message(user_id, StickerSendMessage(package_id=11537, sticker_id=52002746))
+        for i in range(10):
+            if (10-i) == 4:
+                line_bot_api.push_message(user_id, TextSendMessage("..."))
+            time.sleep(1)
+        line_bot_api.push_message(user_id, TextSendMessage("冷卻完畢"))
+        h = 0
+    elif (text.find("壞") != -1):
+        line_bot_api.push_message(user_id, StickerSendMessage(package_id=11537, sticker_id=52002746))
+        for i in range(10):
+            if (10-i) == 4:
+                line_bot_api.push_message(user_id, TextSendMessage("..."))
+            time.sleep(1)
+        line_bot_api.push_message(user_id, TextSendMessage("冷卻完畢"))
     elif (text.find("狗狗") != -1):
         reply_text = "凹嗚～"
         line_bot_api.reply_message(event.reply_token, TextSendMessage(reply_text))
