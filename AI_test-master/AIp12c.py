@@ -62,9 +62,9 @@ app = Flask(__name__)  # __name__ 代表目前執行的模組
 
 ###=== (5.3) LINE介面密碼 ===### (參考3.3)
 ##== (1) Channel Access Token
-line_bot_api = LineBotApi("jaFAo80YGzU2SPCBaujSGrUTSHfwVw+HPAXAxt1fhg3ORuaaYMUUItTYfUQ0/ZzdBXbOTo77JBEM61zzU1V7IMALQXxQcPK+cK98XK3UHBQym/Nyp/g9w5U0SYebj09mxii1q7qvFUVnG1au+980IwdB04t89/1O/w1cDnyilFU=")
+line_bot_api = LineBotApi("oyQ62t5OR6e4dafpMXFSsgk5BNp6xhPTMWrPGdjIzK+sX0Vyk0wKky3VZJ9AZCRHz4MRu7rPUD+h12XfDE6jIfajTENehJ33763DftWmA/lYzUPRXZeq+VfudrjXZRihCsnkwuYguB0vzR8dXfZ5yQdB04t89/1O/w1cDnyilFU=")
 ##== (2) Channel Secret
-handler = WebhookHandler("9b3990e913ad529550a80c473774655e")
+handler = WebhookHandler("Ud46553ab26dc47a70ad287576b5516e9")
 ###=== (5.4) 監聽來自 /callback 的 Post Request  ===###
 @app.route("/callback", methods=['POST']) 
 def callback():
