@@ -87,6 +87,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     print(event)
+    user_id = event.source.user_id
     if event.message.id == "100001":
         return
 
