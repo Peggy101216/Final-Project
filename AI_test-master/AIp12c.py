@@ -59,7 +59,7 @@ import conSql as cons
 
 ###=== (5.2) 程式宣告 ===###  
 app = Flask(__name__)  # __name__ 代表目前執行的模組
-
+app.logger.setLevel(logging.INFO)
 ###=== (5.3) LINE介面密碼 ===### (參考3.3)
 ##== (1) Channel Access Token
 line_bot_api = LineBotApi("oyQ62t5OR6e4dafpMXFSsgk5BNp6xhPTMWrPGdjIzK+sX0Vyk0wKky3VZJ9AZCRHz4MRu7rPUD+h12XfDE6jIfajTENehJ33763DftWmA/lYzUPRXZeq+VfudrjXZRihCsnkwuYguB0vzR8dXfZ5yQdB04t89/1O/w1cDnyilFU=")
