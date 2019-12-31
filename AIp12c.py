@@ -129,7 +129,7 @@ def handle_message(event):
             if (10-i) == 4:
                 line_bot_api.push_message(user_id, TextSendMessage("..."))
             time.sleep(1)
-        line_bot_api.push_message(user_id, TextSendMessage("冷卻完畢"))
+        line_bot_api.push_message(user_id, TextSendMessage("冷卻完"))
         h = 0
     elif (text.find("壞") != -1):
         line_bot_api.push_message(user_id, StickerSendMessage(package_id=11537, sticker_id=52002746))
